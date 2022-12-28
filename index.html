@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кредитный калькулятор</title>
+    <link rel="stylesheet" href="1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <h1>Кредитный калькулятор</h1>
+  
+    <hr class="first-line">
+<div class="container">
+    <form name="calculator">
+        <div class="input-div">
+        <input placeholder="Сумма кредита" type="text" class="credit-sum">
+        <input placeholder="Срок, мес." type="text" class="credit-term"  list="credit-term-values">
+        <datalist id="credit-term-values">
+            <option value="1"></option>
+            <option value="3"></option>
+            <option value="6"></option>
+            <option value="12"></option>
+            <option value="18"></option>
+            <option value="24"></option>
+            <option value="30"></option>
+            <option value="36"></option>
+        </datalist>
+        <input placeholder="Ставка, %"  type="text" class="percent" >
+        <p class="payment-type">Вид платежа</p>
+        <input type="radio" id="annuit-credit" >
+        <label for="annuit-credit" class="annuit-credit-switch"><span class="annuit-credit-switch-text" >Аннуитетный</span></label>
+        <input type="radio" id="diff-credit" >
+        <label for="diff-credit" class="diff-credit-switch"><span class="diff-credit-switch-text" >Дифференцированный</span></label>
+        <button type="button"  class="to-count">Рассчитать</button>
+        </div>
+        <div class="output-div">
+            <h3>Расчет кредита</h3>
+            <hr>
+            <span>Сумма кредита</span>
+            <div class="credit-sum-output">
+            </div>
+            <hr>
+            <span class="sum-to-pay">Общая сумма выплат</span>
+            <div class="sum-to-pay-output">
+            </div>
+            <hr>
+            <span class="overpaying">Сумма переплат</span>
+            <div class="overpaying-output">
+            </div>
+            <hr>
+            <span class="percent-overpaying">Процент переплат</span>
+            <div class="percent-overpaying-output">
+            </div>
+            <hr>
+            <span class="payment-output">Ежемесячный платеж</span>
+            <div class="month-payment-output">
+            </div> 
+            <hr>
+            <button type="button" class="show-the-table"><span class="textOfBtn">Показать таблицу платежей</span></button>
+        </div>
+    </form>
+    <div class="table-wrapper">
+        <table class="tableOfValues">
+        </table>
+    </div>
+</div>  
+<script src="calc.js"></script>
+</body>
+</html>

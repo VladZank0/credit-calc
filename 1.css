@@ -1,0 +1,280 @@
+body{
+    padding: 0;
+    margin:0;
+    font-family: 'Akshar', sans-serif;
+    background-image: url(../Проект/fon1.jpg)  ;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1{
+    text-align: center;
+    color: rgb(61, 98, 179);
+    margin:10px
+}
+.first-line{
+    margin-bottom: 30px;
+}
+.container{
+    
+    max-width: 1200px;
+    margin:0 auto;
+}
+form{
+    border:1px rgb(146, 146, 146) solid;
+    height: 350px;
+    width:1000px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #7fc1d6ba;
+    margin:0 auto;
+}
+input{
+    margin:20px;
+}
+.input-div{
+    position: relative;
+    width: 500px;
+    height:350px;
+    border-right:1px solid black;
+}
+.output-div
+{
+    position:relative;
+    width:500px;
+    height:350px;
+    float:right;
+    margin-left:20px;
+    left: 20px;
+    top: -350px;
+}
+.credit-sum
+{ 
+    width:392px;
+    height:40px;
+    border-radius: 5px;
+    font-size:16px;
+    border: none;
+    box-shadow: 1px 1px 5px rgb(39, 39, 39);
+}
+.credit-term{
+    height:40px;
+    width:150px;
+    border-radius: 5px;
+    font-size:16px;
+    border: none;
+    box-shadow: 1px 1px 5px rgb(39, 39, 39);
+}
+.percent{
+    height:40px;
+    width:150px;
+    border-radius: 5px;
+    font-size:16px;
+    margin-left: 63px;
+    border: none;
+    box-shadow: 1px 1px 5px rgb(39, 39, 39);
+}
+.payment-type{
+    margin-left: 20px;
+    color:black;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top:30px;
+    padding: 0; 
+}
+#annuit-credit{
+    display: none;
+}
+#diff-credit{
+    display: none;
+}
+.annuit-credit-switch{
+    width: 197px;
+    height:35px;
+    display: block;
+    border:solid 1px black;
+    position: absolute;
+    background-color: white;
+    margin-left:21px ;
+}
+.diff-credit-switch{
+    width: 197px;
+    height:35px;
+    display: block;
+    border:solid 1px black;
+    position: relative;
+    background-color: white;
+    margin-left:219px;
+}
+.annuit-credit-switch-text{
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 50px; 
+}
+.diff-credit-switch-text{
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 15px;
+}
+.to-count{
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(208, 80, 25);
+    margin-top:40px;
+    margin-left: 120px;
+    width: 200px;
+    height:40px;
+    font-size: 16px;
+    color: aliceblue;
+    box-shadow:  1px 1px 2px black;
+}
+.to-count:hover{
+    background-color: rgb(255, 100, 33);
+    transition: 0.4s;
+    cursor: pointer;
+}
+.to-count:active{
+    height: 39px;
+    width:199px;
+    transition: 0.7ms;
+    box-shadow:  0px 0px  black;
+}
+.diff-credit-switch:hover {
+    background-color: #58b6f0;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.annuit-credit-switch:hover{
+    background-color: #58b6f0;
+    cursor: pointer;
+    transition: 0.4s;   
+}
+#annuit-credit:checked~.annuit-credit-switch{
+    background-color: #1a9dee ;
+}
+#diff-credit:checked~.diff-credit-switch{
+    background-color: #1a9dee ;
+}
+h3{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
+}
+hr{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+/* ================блоки вывода значений============= */
+.credit-sum-output{
+    
+    width:300px;
+    height:25px;
+    float:right;
+    position: relative;
+    top:-6px;
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    padding-right: 10px;
+    margin: 0;
+}
+.sum-to-pay-output{
+    width:300px;
+    height:25px;
+    float:right;
+    position: relative;
+    top:-6px;
+    padding-right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    margin: 0;
+}
+.overpaying-output{
+    width:300px;
+    height:25px;
+    float:right;
+    position: relative;
+    top:-6px;
+    padding-right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    margin: 0;
+}
+.percent-overpaying-output{
+    position: relative;
+    top:-6px;
+    width:300px;
+    height:25px;
+    float:right;
+    padding-right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    margin: 0;
+}
+.month-payment-output{
+    position: relative;
+    top:-6px;
+    width:300px;
+    height:25px;
+    float:right;
+    padding-right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    margin: 0;
+}
+.show-the-table{
+    width: 200px;
+    height:40px;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 1px 1px 3px black;
+    font-size: 15px;
+    background-color: #17b817e2;
+    color:rgb(226, 241, 255);
+    position: relative;
+    top:48px;
+    left:150px;
+}
+.show-the-table:hover{
+    background-color: rgb(26, 205, 26);
+    transition: 0.4s;
+    cursor: pointer;
+}
+.show-the-table:active{
+    height: 39px;
+    width:199px;
+    transition: 0.7ms;
+    box-shadow:  0px 0px  black;
+}
+.table-wrapper{
+    width: 1060px;
+    margin: 0 auto;
+    margin-top:30px;
+    padding: 0;
+    position: relative;
+}
+.tableOfValues{
+    width: 1060px;
+    border-collapse: collapse;
+    position: absolute;
+    top:0;
+    background-color: #7fc1d6ba;
+}
+tr{
+    height:30px;
+    width:1000px;
+    border:1px solid black;
+}
+td{
+    height:30px;
+    width:200px;
+    border:1px solid black;
+    text-align: center;
+}
+
+
+ 
